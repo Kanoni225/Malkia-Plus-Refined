@@ -1,11 +1,28 @@
 .cover-page {
     background-image: url("images/interview_questions_and_answers.jpg");
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
+    
+    /* Responsive background sizing */
+    background-size: auto 100%; /* This will maintain aspect ratio */
+}
+
+/* For smaller screens (mobile) */
+@media (max-width: 768px) {
+    .cover-page {
+        background-size: contain;
+    }
+}
+
+/* For larger screens (desktop) */
+@media (min-width: 769px) {
+    .cover-page {
+        background-size: cover;
+    }
 }
